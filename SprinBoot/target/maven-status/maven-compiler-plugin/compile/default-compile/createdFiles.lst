@@ -1,0 +1,7 @@
+com/fa/NgApplication.class
+com/fa/dto/NgDto.class
+com/fa/controller/NgController.class
+com/fa/Repository/NgRepository.class
+com/fa/Entity/NgEntity.class
+com/fa/service/NgService.class
+com/fa/serviceImpl/NgServiceImpl.class
