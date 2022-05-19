@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CommonDto } from '../table/table.component';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,14 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   save(input : any) {
+
     const headers={
       "Content-type": "application/json"
     }
     return this.http.post(`${this.baseUrl}` + "/save",input,{headers});
   }
-  fetch(input : any){
-    return this.http.get(`${this.baseUrl}`+"/fetch");
+  
+  fetch(){
+    return this.http.get<CommonDto>(`${this.baseUrl}`+"/fetch");
   }
 }

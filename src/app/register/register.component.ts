@@ -50,6 +50,13 @@ export class RegisterComponent implements OnInit {
 
   updateName() {
     // this.name.setValue('Nancy');
+    this.profileForm.patchValue({
+      name:"Janagi Raman",
+      email:"janagiraman@email.com",
+      mobile:"1234567890",
+      gender:"Male",
+      team:"LIC"
+    });
   }
 
   get f(){
@@ -74,7 +81,7 @@ export class RegisterComponent implements OnInit {
 
   fetch(){
     console.log(this.profileForm.value);
-    this.service.fetch(this.profileForm.value).subscribe((response)=>{
+    this.service.fetch().subscribe((response)=>{
       console.log(response);
     })
   }
